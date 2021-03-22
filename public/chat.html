@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <title>Chat Room</title>
 </head>
 <body>
-    <div class="header-area">
-    <h1>čet</h1>
+    <div class="header">
+    <h1>hej čede</h1>
     </div>
 
-    <div class="message-area" id="message-area">
+    <div class="zona-zpravy" id="zona-zpravy">
+        <div class="muj-box others-message-box">
+            <div class="zprava zprava-jinych">Máš rád palačinky?</div>
+            <div class="separator"></div>
+            </div>
+    
+        <div class="muj-box moje-zprava-box">
+            <div class="zprava moje-zprava">Jen se sýrem</div>
+            <div class="separator"></div>
+        </div>
     </div>
 
-<div class="typing-area">
+<div class="psaci-area">
+    <textarea class="psaci-box" id="psaci-box"></textarea>
+    <button class="tlacitko" onclick="sendMessage()">Poslat</button>
     </div>
 
 </body>
