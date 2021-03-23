@@ -12,25 +12,46 @@
     <title>Chat Room</title>
 </head>
 <body>
+
     <div class="header">
     <h1>hej čede</h1>
     </div>
+    <div class="motiv">
+        <input type="checkbox" id="theme1" name="theme1" value="theme1">
+        <label for="theme1"> <--- Bílý mód</label>
+    <br>
+        <input type="checkbox" id="theme" name="White theme" value="theme">
+        <label for="theme"> <--- Bílý mód</label>
+    <br>
+        <input type="checkbox" id="theme" name="White theme" value="theme">
+        <label for="theme"> <--- Bílý mód</label>
+    <br>
+        <input type="checkbox" id="theme" name="White theme" value="theme">
+        <label for="theme"> <--- Bílý mód</label>
+    <br>
+        <input type="checkbox" id="theme" name="White theme" value="theme">
+        <label for="theme"> <--- Bílý mód</label>
+    <br>
+    </div>
+
+<div class="full">
 
     <div class="zona-zpravy" id="zona-zpravy">
 
     </div>
 
-<div class="psaci-zona">
-    <textarea class="psaci-box" id="psaci-box"></textarea>
-    <button class="tlacitko" onclick="poslatZpravu()">Poslat</button>
+    <div class="psaci-zona">
+        <textarea class="psaci-box" id="psaci-box"></textarea>
+        <button class="tlacitko" id="poslat">Poslat</button>
     </div>
-
-<script src="js/main.js"></script>
+  
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA==" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

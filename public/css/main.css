@@ -8,13 +8,16 @@
     height: 6%;
     background: rgb(0, 127, 255);
     color: white;
-    padding: 4px;
+    padding: 8px;
+    text-align: center;
 }
 
 .zona-zpravy {
     height: 80%;
     padding: 3px;
     overflow: auto;
+    border: 2px solid black;
+
 }
 
 .psaci-zona {
@@ -32,13 +35,13 @@
 
 .tlacitko {
     border: 0;
-    width: 9%;
+    width: 8%;
     background: rgb(0, 127, 255);
     color: white;
-    padding: 8px;
+    padding: 10px;
     font-size: 18px;
-    position: absolute;
-    margin: 8px;
+    margin-bottom: 150px;
+    margin: 4px;
 }
 
 .zprava-box {
@@ -69,12 +72,22 @@
     background: white;
 }
 
-.ostatnich-zprava-box {
 
-}
 
 .separator {
     width: 100%;
     height: 8px;
     float: left;
+}
+
+
+
+
+.full {
+    width:1000px;
+    height:1000px;
+}
+
+.motiv {
+    float: right;
 }
