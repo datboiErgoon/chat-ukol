@@ -1,0 +1,180 @@
+let socket = io();
+const psaciBox = document.getElementById("psaci-box");
+const zonaZpravy = document.getElementById("zona-zpravy");
+const poslat = document.getElementById("poslat");
+let myid;
+
+
+socket.on('message-from-others', function(zprava,id){
+  let html;
+
+  if(myid == id) {
+    html = '<div class="zprava-box moje-zprava-box">' +
+    '<div class="zprava moje-zprava" id="moje-zprava"> ' + zprava + ' </div>' +
+    '<div class="separator"></div>' +
+    '</div>';
+  } else {
+    html = '<div class="zprava-box ostatnich-zprava-box">' +
+    '<div class="zprava zprava-jinych" id="zprava-jinych"> ' + zprava + ' </div>' +
+    '<div class="separator"></div>' +
+    '</div>';
+  }
+
+  zonaZpravy.innerHTML += html;
+})
+
+poslat.addEventListener('click', function(){
+  console.log("klik")
+  
+  zprava = psaciBox.value;
+  psaciBox.value = "";
+
+  socket.emit('codeboard-message', zprava);
+})
+
+socket.emit('getid');
+
+socket.on('getid', function(id){
+  myid = id;
+})
+
+
+theme1.addEventListener('change', function() { 
+    if (this.checked) {
+      
+      document.body.style.backgroundColor = "#161a1d";
+      document.getElementById("header").style.backgroundColor = "orange";
+      document.getElementById("header").style.color = "black";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#161a1d";
+      document.getElementById("psaci-box").style.backgroundColor = "orange";
+      document.getElementById("psaci-box").style.borderColor = "black";
+      document.getElementById("poslat").style.backgroundColor = "orange";
+      document.getElementById("poslat").style.color = "black";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      $('#sstyle').append('#moje-zprava {background-color: orange !important} #zprava-jinych {background-color: #161a1d !important}');
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
+      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("poslat").style.color = "white";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      $( "#sstyle" ).empty();
+    }
+  });
+
+  theme2.addEventListener('change', function() { 
+    if (this.checked) {
+      document.body.style.backgroundColor = "#242424";
+      document.getElementById("header").style.backgroundColor = "#7CE41C";
+      document.getElementById("header").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#242424";
+      document.getElementById("psaci-box").style.backgroundColor = "#7CE41C";
+      document.getElementById("psaci-box").style.borderColor = "black";
+      document.getElementById("poslat").style.backgroundColor = "#7CE41C";
+      document.getElementById("poslat").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
+      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
+      
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
+      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("poslat").style.color = "white";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+    }
+  });
+  
+  theme3.addEventListener('change', function() { 
+    if (this.checked) {
+      document.body.style.backgroundColor = "#6930c3";
+      document.getElementById("header").style.backgroundColor = "#deaaff";
+      document.getElementById("header").style.color = "#6930c3";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#6930c3";
+      document.getElementById("psaci-box").style.backgroundColor = "#deaaff";
+      document.getElementById("psaci-box").style.borderColor = "black";
+      document.getElementById("poslat").style.backgroundColor = "#deaaff";
+      document.getElementById("poslat").style.color = "#6930c3";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "#deaaff";
+      document.getElementById("zprava-jinych").style.backgroundColor = "#6930c3";
+      
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
+      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("poslat").style.color = "white";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+    }
+  });
+
+
+  theme4.addEventListener('change', function() { 
+    if (this.checked) {
+      document.body.style.backgroundColor = "#242424";
+      document.getElementById("header").style.backgroundColor = "#7CE41C";
+      document.getElementById("header").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#242424";
+      document.getElementById("psaci-box").style.backgroundColor = "#7CE41C";
+      document.getElementById("psaci-box").style.borderColor = "black";
+      document.getElementById("poslat").style.backgroundColor = "#7CE41C";
+      document.getElementById("poslat").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
+      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
+      
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
+      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("poslat").style.color = "white";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+    }
+  });
+
+
+  theme5.addEventListener('change', function() { 
+    if (this.checked) {
+      document.body.style.backgroundColor = "#242424";
+      document.getElementById("header").style.backgroundColor = "#7CE41C";
+      document.getElementById("header").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#242424";
+      document.getElementById("psaci-box").style.backgroundColor = "#7CE41C";
+      document.getElementById("psaci-box").style.borderColor = "black";
+      document.getElementById("poslat").style.backgroundColor = "#7CE41C";
+      document.getElementById("poslat").style.color = "#242424";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
+      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
+      
+    } else {
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
+      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("poslat").style.color = "white";
+      document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
+      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+    }
+  });
