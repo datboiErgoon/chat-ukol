@@ -41,7 +41,6 @@ socket.on('getid', function(id){
 
 theme1.addEventListener('change', function() { 
     if (this.checked) {
-      
       document.body.style.backgroundColor = "#161a1d";
       document.getElementById("header").style.backgroundColor = "orange";
       document.getElementById("header").style.color = "black";
@@ -51,7 +50,8 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "orange";
       document.getElementById("poslat").style.color = "black";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      $('#sstyle').append('#moje-zprava {background-color: orange !important} #zprava-jinych {background-color: #161a1d !important}');
+      document.getElementById("motiv").style.color = "orange";
+      $('#sstyle').append('#moje-zprava {background-color: orange !important; color: black !important} #zprava-jinych {background-color: #161a1d !important; color: white !important}; ');
     } else {
       document.body.style.backgroundColor = "white";
       document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
@@ -61,6 +61,7 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
       document.getElementById("poslat").style.color = "white";
       document.getElementById("zona-zpravy").style.borderColor = "black";
+      document.getElementById("motiv").style.color = "";
       $( "#sstyle" ).empty();
     }
   });
@@ -76,9 +77,8 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "#7CE41C";
       document.getElementById("poslat").style.color = "#242424";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
-      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
-      
+      document.getElementById("motiv").style.color = "#7CE41C";
+      $('#sstyle').append('#moje-zprava {background-color:#7CE41C !important; color: black !important} #zprava-jinych {background-color: #242424 !important; color: white !important}; ');
     } else {
       document.body.style.backgroundColor = "white";
       document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
@@ -88,25 +88,23 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
       document.getElementById("poslat").style.color = "white";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+      document.getElementById("motiv").style.color = "";
+      $( "#sstyle" ).empty();
     }
   });
   
   theme3.addEventListener('change', function() { 
     if (this.checked) {
-      document.body.style.backgroundColor = "#6930c3";
-      document.getElementById("header").style.backgroundColor = "#deaaff";
-      document.getElementById("header").style.color = "#6930c3";
-      document.getElementById("zona-zpravy").style.backgroundColor = "#6930c3";
-      document.getElementById("psaci-box").style.backgroundColor = "#deaaff";
+      document.body.style.backgroundColor = "white";
+      document.getElementById("header").style.backgroundColor = "#fb45de";
+      document.getElementById("header").style.color = "white";
+      document.getElementById("zona-zpravy").style.backgroundColor = "white";
+      document.getElementById("psaci-box").style.backgroundColor = "white";
       document.getElementById("psaci-box").style.borderColor = "black";
-      document.getElementById("poslat").style.backgroundColor = "#deaaff";
-      document.getElementById("poslat").style.color = "#6930c3";
+      document.getElementById("poslat").style.backgroundColor = "#fb45de";
+      document.getElementById("poslat").style.color = "white";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "#deaaff";
-      document.getElementById("zprava-jinych").style.backgroundColor = "#6930c3";
-      
+      $('#sstyle').append('#moje-zprava {background-color: #fb45de !important; color: white !important} #zprava-jinych {background-color: white !important; color: black !important}; ');
     } else {
       document.body.style.backgroundColor = "white";
       document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
@@ -116,26 +114,24 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
       document.getElementById("poslat").style.color = "white";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+      $( "#sstyle" ).empty();
     }
   });
 
 
   theme4.addEventListener('change', function() { 
     if (this.checked) {
-      document.body.style.backgroundColor = "#242424";
-      document.getElementById("header").style.backgroundColor = "#7CE41C";
-      document.getElementById("header").style.color = "#242424";
-      document.getElementById("zona-zpravy").style.backgroundColor = "#242424";
-      document.getElementById("psaci-box").style.backgroundColor = "#7CE41C";
+      document.body.style.backgroundColor = "#242526";
+      document.getElementById("header").style.backgroundColor = "#606060";
+      document.getElementById("header").style.color = "#242526";
+      document.getElementById("zona-zpravy").style.backgroundColor = "#242526";
+      document.getElementById("psaci-box").style.backgroundColor = "#606060";
       document.getElementById("psaci-box").style.borderColor = "black";
-      document.getElementById("poslat").style.backgroundColor = "#7CE41C";
-      document.getElementById("poslat").style.color = "#242424";
+      document.getElementById("poslat").style.backgroundColor = "#606060";
+      document.getElementById("poslat").style.color = "#242526";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
-      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
-      
+      document.getElementById("motiv").style.color = "#606060";
+      $('#sstyle').append('#moje-zprava {background-color:#606060 !important; color: black !important} #zprava-jinych {background-color: #242526 !important; color: #606060 !important}; ');
     } else {
       document.body.style.backgroundColor = "white";
       document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
@@ -145,36 +141,7 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
       document.getElementById("poslat").style.color = "white";
       document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("zprava-jinych").style.backgroundColor = "white";
-    }
-  });
-
-
-  theme5.addEventListener('change', function() { 
-    if (this.checked) {
-      document.body.style.backgroundColor = "#242424";
-      document.getElementById("header").style.backgroundColor = "#7CE41C";
-      document.getElementById("header").style.color = "#242424";
-      document.getElementById("zona-zpravy").style.backgroundColor = "#242424";
-      document.getElementById("psaci-box").style.backgroundColor = "#7CE41C";
-      document.getElementById("psaci-box").style.borderColor = "black";
-      document.getElementById("poslat").style.backgroundColor = "#7CE41C";
-      document.getElementById("poslat").style.color = "#242424";
-      document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "#7CE41C";
-      document.getElementById("zprava-jinych").style.backgroundColor = "#242424";
-      
-    } else {
-      document.body.style.backgroundColor = "white";
-      document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("header").style.color = "white";
-      document.getElementById("zona-zpravy").style.backgroundColor = "white";
-      document.getElementById("psaci-box").style.backgroundColor = "white";
-      document.getElementById("poslat").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("poslat").style.color = "white";
-      document.getElementById("zona-zpravy").style.borderColor = "black";
-      document.getElementById("moje-zprava").style.backgroundColor = "rgb(0, 127, 255)";
-      document.getElementById("zprava-jinych").style.backgroundColor = "white";
+      document.getElementById("motiv").style.color = "";
+      $( "#sstyle" ).empty();
     }
   });
