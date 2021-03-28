@@ -131,7 +131,7 @@ theme1.addEventListener('change', function() {
       document.getElementById("poslat").style.color = "#242526";
       document.getElementById("zona-zpravy").style.borderColor = "black";
       document.getElementById("motiv").style.color = "#606060";
-      $('#sstyle').append('#moje-zprava {background-color:#606060 !important; color: black !important} #zprava-jinych {background-color: #242526 !important; color: #606060 !important}; ');
+      $('#sstyle').append('#moje-zprava {background-color:#606060 !important; color: black !important} #zprava-jinych {background-color: #242526 !important; color: white !important}; ');
     } else {
       document.body.style.backgroundColor = "white";
       document.getElementById("header").style.backgroundColor = "rgb(0, 127, 255)";
